@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function myFunction(){
+            console.log("My Function");
+        }
+        myFunction()
+
+        function myFunction1(para1, para2, para3){
+            console.log("para1 + para2 =" , para1 + para2 + para3)
+        }
+        myFunction1();
+
+
+        //function expession
+       var myFunction4 = function myFunction3(para1, para2, para3){
+            console.log("para1 + para2 =" , para1 + para2 + para3)
+        }
+        myFunction4(2,"4",4);
+
+       //arrow function
+        var arrowFunction = ()=> {
+            console.log("Welcome to arrow function");
+        }
+        arrowFunction();
+
+        var arrowFuction1 = (para1 , para2) => {
+            console.log(para1+para2);
+        }
+        arrowFuction1(12,34);
+
+        //anonymous function immedtly invoke
+        (function (){
+
+        })
+
+
+        //call back function
+        function callBack(){
+            console.log("Hello! i'm a call back function");
+        }
+        function proccess(param){
+            param();
+        }
+        proccess(callBack());
+
+        //function cunstructor
+         var fc = new function ('param1', 'param2', 'return param1+ param2');
+
+
+
+
+    </script>
+
+
+</body>
+</html>

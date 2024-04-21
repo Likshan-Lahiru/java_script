@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array methods</title>
+</head>
+<body>
+
+    <script>
+        /*push method*/
+        var array = [];
+        array.push(12);//int type value
+        array.push("Hello");// string value enter wenwa
+        console.log(array);//out put (12,Hello)
+        array.push(34);
+        console.log(array);//12,hello,34 ->last element ekta value enter wenwa
+
+        /*pop method*/
+        //remove last element of the array
+        array.pop();
+       // 34
+        console.log(array)//12,hello
+
+
+        /*shift*/
+        //remove first element of the array
+        array.push("Lahiru");
+        console.log(array);//12,hello,lahiru
+        array.shift();
+        console.log(array);//hello, lahiru
+
+        /*unsfit()*/
+        //first elemet ekta value ekak enter karnwa value ona tram eka paar enter karna puwluwn
+        array.unshift("50");
+        console.log(array);//50,hello,lahiru
+        array.unshift("unsift",89,"come");
+        console.log(array);//unsift,89,come,50,hello,lahiru
+
+        /*concat()*/
+        //merge two arrays
+        var array1 = [8,6]
+        var array2 = [1,2,4,3,5,6];
+        var newArray1 =array1.concat(array2);//merge array1 and array2 //8,6,1,2,4,3,5,6
+        console.log(newArray1);
+
+        /*slice*/
+        //array ekak postion ekaka shallow copy ekak aragena denwa
+        var newSliceArray = newArray1.slice(2);
+        console.log(newSliceArray);//dena element eken pase tiyena value tiken array out put ekak denwa [1, 2, 4, 3, 5, 6]
+        var sliceArray2 = newArray1.slice(-3);
+        console.log(sliceArray2);//[3, 5, 6]
+        var sliceArray3 = newArray1.slice(2,4);
+        console.log(sliceArray3);//[1, 2] enter karna element index eka dakwa
+
+
+        /*splice();*/
+        var spliceArray =["car1","car2","car3","car4","car5","car6","car7","car8",];
+        var spliceArray1 =["car1","car2","car3","car4","car5","car6","car7","car8",];
+        spliceArray.splice(3);
+        console.log(spliceArray);//['car1', 'car2', 'car3']
+        spliceArray1.splice(3, 2);//index element and what you need delete index count
+        console.log(spliceArray1);//['car1', 'car2', 'car3', 'car6', 'car7', 'car8']
+        spliceArray1.splice(1,2,"Bike2");// dewaniyta kiyna element eke idala tiyena deka ain krala e wenuwta pase dena value eka replace wenwa
+        console.log(spliceArray1);
+        spliceArray1.splice(1,2,"Dog1","dog2","dog3");
+        console.log(spliceArray1);
+
+        /*indexOf();*/
+        //pass ekarana value eka inna index number eka denwa
+        var spliceArray3 =["car1","car2","car3","car4","car5","car6","car7","car8",];
+        var indexNumber = spliceArray3.indexOf("car3");
+        console.log(indexNumber);//index number 2
+        var indexNumber1 = spliceArray3.indexOf("car7");
+        console.log(indexNumber1);////index number 6
+        var spliceArray4 =["car1","car2","car3","car4","car5","car6","car3","car8"];
+        var lastIndexNumber = spliceArray4.lastIndexOf("car3"); // array eke antimata inna value eka ganwa
+        console.log(lastIndexNumber);
+
+
+        /*includes*/
+        //pass karana value eka inwnam true netam false boolean output ekak
+        var includeArray =["car1","car2","car3","car4","car5","car6","car7","car8",];
+       var isAvailble = includeArray.includes("car4");
+       console.log(isAvailble);
+        var numberArray = [1,2,5,6,8,3];
+
+
+       const findOddNumber = (NumberArray) => {
+
+           var tempArray = [];
+           var arrayLenth = NumberArray.length;
+           console.log("arryLength"+arrayLenth);
+           for (let i = 0; i<arrayLenth; i++){
+               var temp = array[i];
+               console.log("array index" +i);
+               if (temp%2==1){
+                 tempArray[i] = array[i];
+               }
+                return tempArray;
+
+           }
+       }
+        var  oddArray = findOddNumber(numberArray);
+
+        console.log(oddArray);
+
+
+       /*task*/
+
+       var result = numberArray.filter(function (item){
+            return item%2>0;
+        });
+        console.log(result);
+
+    </script>
+
+
+</body>
+</html>

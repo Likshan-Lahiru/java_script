@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var array = [1,4,6,364,78,34,98];
+
+        array.map(item => {
+            console.log(item);
+        })
+
+        array.map((item,index)=>{
+            /*console.log(item+index);*/
+        });
+
+
+        var findMax= (array)=>{
+            var max = array[0];
+             array.map(item =>{
+                 if (item>max){
+                     max = item;
+                 }
+
+
+
+            });
+             return max;
+
+        }
+
+         var max = findMax(array);
+        console.log(max);
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+       /* var array1 = [];
+        var array2 = [1,2,3,4];
+        var array3 = [1,2,4,"Hallo"];
+        var array4 = [1,2,4,"Hallo",true,function () {}];
+
+        console.log(array2[3]);*/
+
+       function finMax(array){
+           var temp = 0;
+           var maxNum = 0;
+           var lenth = array.length;
+
+           for (i=0; i<lenth; i++){
+               temp = array[i];
+               if (maxNum<temp){
+                   maxNum = temp;
+               }
+           }
+           return maxNum;
+
+       }
+       var array1 = [1,5,2,56,78,65,123];
+       var maxNumber = finMax(array1);
+       console.log(maxNumber)
+    </script>
+
+</body>
+</html>
